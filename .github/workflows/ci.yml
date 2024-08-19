@@ -182,7 +182,7 @@ jobs:
             auditwheel repair
             -w {dest_dir} {wheel}
             --exclude libarrow_python.so
-            --exclude libarrow.so.1600
+            --exclude libarrow.so.1700
           CIBW_REPAIR_WHEEL_COMMAND_MACOS: |
             DYLD_LIBRARY_PATH=$LD_LIBRARY_PATH delocate-listdeps {wheel}
             DYLD_LIBRARY_PATH=$LD_LIBRARY_PATH delocate-wheel \
@@ -190,7 +190,7 @@ jobs:
               -w {dest_dir} \
               -v {wheel} \
               --exclude libarrow_python.dylib \
-              --exclude libarrow.1600.dylib \
+              --exclude libarrow.1700.dylib \
               --ignore-missing-dependencies
 
       - name: Upload wheel artifacts

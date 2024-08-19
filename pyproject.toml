@@ -15,7 +15,7 @@ classifiers = [
 dependencies = [
     "appdirs",
     "numpy < 2.0.0",
-    "pyarrow == 16.0.0"
+    "pyarrow == 17.0.0"
 ]
 
 [project.optional-dependencies]
@@ -46,7 +46,7 @@ requires = [
     "cython>=3.0.2",
     "scikit-build-core",
     "numpy < 2.0.0",
-    "pyarrow == 16.0.0"]
+    "pyarrow == 17.0.0"]
 build-backend = "scikit_build_core.build"
 
 [tools.setuptools.packages]

@@ -14,7 +14,7 @@ env:
   CIBW_REPAIR_WHEEL_COMMAND_LINUX: >
     auditwheel repair -w {dest_dir} {wheel}
     --exclude libarrow_python.so
-    --exclude libarrow.so.1600
+    --exclude libarrow.so.1700
   # There's no python-casacore wheel for amd64-linux or macosx
   CIBW_TEST_COMMAND_LINUX: python -c "from arcae.testing import sanity; sanity()"
 
