@@ -97,13 +97,15 @@ jobs:
       matrix:
         os: ["ubuntu-22.04", "macos-13", "macos-14"]
         # https://peps.python.org/pep-0425
-        cpython: ["cp310", "cp311", "cp312"]
+        cpython: ["cp310", "cp311", "cp312", "cp313"]
         is_main_or_release:
           - ${{ contains(github.ref, 'main') || startsWith(github.ref, 'refs/tags')}}
         # Avoid building all wheels in a PR
         exclude:
           - is_main_or_release: false
             cpython: cp310
+          - is_main_or_release: false
+            cpython: cp311
           - is_main_or_release: false
             cpython: cp312
         include:
